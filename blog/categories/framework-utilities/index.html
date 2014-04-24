@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Maticon</title>
+  <title>Category: Framework Utilities - Maticon</title>
   <meta name="author" content="Maticon, Inc.">
 
   
-  <meta name="description" content="Intro If you are using RDP (Remote Desktop Protocol) to connect to your Windows test machines for UI test automation, it is crucial that you &hellip;">
+  <meta name="description" content="Category: Framework Utilities">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://maticon.io">
+  <link rel="canonical" href="http://maticon.ioblog/categories/framework-utilities">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Maticon" type="application/atom+xml">
@@ -63,89 +63,40 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article role="article">
   
-  
-  
-    <article>
-      
   <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/04/24/disconnect-rdp-sessions/">Disconnect RDP Sessions</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-04-24T11:34:32-04:00" pubdate data-updated="true">Apr 24<span>th</span>, 2014</time>
-        
-      </p>
+    <h1 class="entry-title">Category: Framework Utilities</h1>
     
   </header>
+  
+  <div id="blog-archives" class="category">
 
 
-  <div class="entry-content"><h1>Intro</h1>
 
-<p>If you are using RDP (Remote Desktop Protocol) to connect to your Windows test machines for UI test automation, it is crucial that you disconnect the active RDP session and pass control to the console.  This allows the automation tool to properly interact with the desktop or web application.</p>
+  
+  <h2>2014</h2>
 
-<h1>Code</h1>
+<article>
+  
+<h1><a href="/blog/2014/04/24/disconnect-rdp-sessions/">Disconnect RDP Sessions</a></h1>
+<time datetime="2014-04-24T11:34:32-04:00" pubdate><span class='month'>Apr</span> <span class='day'>24</span> <span class='year'>2014</span></time>
 
-<figure class='code'><figcaption><span>Disconnect RDP Session - Current User</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='bat'><span class='line'><span class="k">for</span> <span class="n">/f</span> <span class="s2">&quot;skip=1 tokens=3 usebackq&quot;</span> <span class="nv">%%sId</span> in (
-</span><span class='line'>  <span class="c">:: Query for Current User Name</span>
-</span><span class='line'>  <span class="s1">&#39;query user %username%&#39;</span>
-</span><span class='line'>) <span class="k">do</span> (
-</span><span class='line'>  <span class="c">:: Disconnect RDP Session &amp; Pass Control to Console</span>
-</span><span class='line'>  <span class="s1">&#39;%windir%\System32\tscon.exe&#39;</span> <span class="nv">%%sId</span> <span class="n">/dest:console</span>
-</span><span class='line'>)
-</span></code></pre></td></tr></table></div></figure>
+<footer>
+  <span class="categories">posted in <a class='category' href='/blog/categories/framework-utilities/'>Framework Utilities</a>, <a class='category' href='/blog/categories/qa/'>QA</a>, <a class='category' href='/blog/categories/rdp/'>RDP</a>, <a class='category' href='/blog/categories/windows/'>Windows</a></span>
+</footer>
 
 
-<h1>How To</h1>
+</article>
 
-<blockquote><ul>
-<li>Copy and Paste the code into a batch file (i.e. Disconnect_RDP.bat)</li>
-<li>Integrate into any automation framework by calling the batch file during test setup</li>
-<li>Run manually to leave the test machine in a state ready for automated testing.</li>
-</ul>
-</blockquote>
-
-<h1>References</h1>
-
-<blockquote><p><a href="http://technet.microsoft.com/en-us/library/bb490801.aspx" target="_blank">query user</a></p>
-
-<p><a href="http://technet.microsoft.com/en-us/library/cc770988.aspx" target="_blank">tscon</a></p></blockquote>
-
-<p><em>Automate Everything!</em></p>
 </div>
-  
-  
 
-
-    </article>
   
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
+</article>
+
 </div>
+
 <aside class="sidebar">
   
     <section>
@@ -165,6 +116,7 @@
 
   
 </aside>
+
 
     </div>
   </div>

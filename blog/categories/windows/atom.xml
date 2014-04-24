@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Maticon]]></title>
-  <link href="http://maticon.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Windows | Maticon]]></title>
+  <link href="http://maticon.io/blog/categories/windows/atom.xml" rel="self"/>
   <link href="http://maticon.io/"/>
   <updated>2014-04-24T12:31:14-04:00</updated>
   <id>http://maticon.io/</id>
@@ -24,22 +24,15 @@
 
 <h1>Code</h1>
 
-<figure class='code'><figcaption><span>Disconnect RDP Session - Current User</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='bat'><span class='line'><span class="k">for</span> <span class="n">/f</span> <span class="s2">&quot;skip=1 tokens=3 usebackq&quot;</span> <span class="nv">%%sId</span> in (
-</span><span class='line'>  <span class="c">:: Query for Current User Name</span>
-</span><span class='line'>  <span class="s1">&#39;query user %username%&#39;</span>
-</span><span class='line'>) <span class="k">do</span> (
-</span><span class='line'>  <span class="c">:: Disconnect RDP Session &amp; Pass Control to Console</span>
-</span><span class='line'>  <span class="s1">&#39;%windir%\System32\tscon.exe&#39;</span> <span class="nv">%%sId</span> <span class="n">/dest:console</span>
-</span><span class='line'>)
-</span></code></pre></td></tr></table></div></figure>
-
+<p><code>bat Disconnect RDP Session - Current User
+for /f "skip=1 tokens=3 usebackq" %%sId in (
+  :: Query for Current User Name
+  'query user %username%'
+) do (
+  :: Disconnect RDP Session &amp; Pass Control to Console
+  '%windir%\System32\tscon.exe' %%sId /dest:console
+)
+</code></p>
 
 <h1>How To</h1>
 
