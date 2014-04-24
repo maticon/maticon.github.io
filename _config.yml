@@ -2,10 +2,10 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://maticon.github.io
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Matthew Pickle
+url: http://maticon.io
+title: Maticon
+subtitle: Automate Everything
+author: Maticon, Inc.
 simple_search: https://www.google.com/search
 description:
 
